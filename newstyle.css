@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "menu content right"
+        "footer footer footer";
+    gap: 10px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header,
+leftmenu,
+content,
+rightmenu,
+footer {
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color:lightgray;
+    color: blue;
+    position: relative;
+    width: 100%;
+}
+
+header img {
+    max-width: 20%;
+    margin-left: 50px;
+    margin-right: 777px;
+}
+
+leftmenu {
+    grid-area: menu;
+    background-color: #eee;
+    margin-top: 1px;
+}
+
+rightmenu{
+    grid-area: right ;
+    background-color: #eee;
+    margin-top: 1px;
+}
+
+content {
+    grid-area: content;
+    background-color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+leftmenu ul,
+rightmenu ul {
+    list-style-type: none;
+}
+
+leftmenu ul li,
+rightmenu ul li {
+    margin-bottom: 10px;
+}
+
+leftmenu ul li a,
+rightmenu ul li a {
+    display: block;
+    padding: 5px;
+    background-color: #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+leftmenu ul li a:hover,
+rightmenu ul li a:hover {
+    background-color: #eee;
+}
+
+content h1 {
+    margin-bottom: 20px;
+}
+
+content p {
+    margin-bottom: 20px;
+}
+
+content img {
+    max-width: calc(100%); 
+    overflow-y: auto;
+    height: auto;
+    margin-left: 30px;
+    margin-right: 30px; 
+}
+
+
+.sub-grid {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.boxed-section {
+    border: 5px outset #000; /* Border style */
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 70px; /* Padding inside the box */
+}
+
+.boxed2-section {
+    border: 3px outset lightgreen; /* Border style */
+    background-color: #adadad;
+    padding: 20px;
+    border-radius: 30px; /* Padding inside the box */
+}
+
+.boxed3-section {
+    border: 3px outset lightcoral; /* Border style */
+    background-color: #adadad;
+    padding: 20px;
+    border-radius: 30px; /* Padding inside the box */
+}
+
+.fixed-size-image {
+    width: 320px; /* Set the width to 200 pixels */
+    height: 180px; /* Set the height to 150 pixels */
+}
+
+.fixed-size-image2 {
+    width: 1100px; /* Set the width to 200 pixels */
+    height: 300px; /* Set the height to 150 pixels */
+}
+
+.link-to-website a {
+    color: blue; /* Set the default color */
+    text-decoration: none; /* Remove underline from the link */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.link-to-website a:hover {
+    color: red; /* Change color on hover */
+}
+
+.container {
+    text-align: center; /* Center the content horizontally */
+}
+
+.centered-image {
+    display: inline-block; /* Make the image an inline-block element */
+}
